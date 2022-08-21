@@ -14,6 +14,15 @@ function randomize() {
     }
 }
 
+function toggleLanguage() {
+    isFR = !isFR;
+    var word1 = document.getElementById("word1");
+    var word2 = document.getElementById("word2");
+    var tmp = word1.innerHTML;
+    word1.innerHTML = word2.innerHTML;
+    word2.innerHTML = tmp;
+}
+
 
 var words = [
     {"fr": "<em>un nom de vêtement</em>", "en": "happy"},

@@ -41,7 +41,7 @@
     transform: translateY(-50%);
 }
 
-#button {
+.button {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -55,7 +55,7 @@
     height: 3em;
 }
 
-#button:hover {
+.button:hover {
     border: 1px solid cornflowerblue;
     color: cornflowerblue;
     cursor: pointer;
