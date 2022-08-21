@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "BrownFtv-Bold";
+  src:url("fonts/BrownFtv-Bold.otf");
+}
+@font-face {
+  font-family: "BrownFtv-Light";
+  src:url("fonts/BrownFtv-Light.otf");
+}
+@font-face {
+  font-family: "BrownFtv-Regular";
+  src:url("fonts/BrownFtv-Regular.otf");
+}
+
+
+#card {
+    border: 1px solid black;
+    border-radius: 20px;
+    height:500px;
+    width: 270px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+.blob {
+    border: 5px solid gray;
+    border-radius: 100%;
+    height: 180px;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-color: white;
+    display:table;
+}
+
+#blobcontainer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+#button:hover {
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+#blob1 {
+    transform: rotate(0.5turn);
+}
+
+.word {
+    display:table-cell;
+    vertical-align: middle;
+    font-family: "BrownFtv-Bold";
+}
