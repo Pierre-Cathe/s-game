@@ -1,16 +1,49 @@
+
 @font-face {
-  font-family: "BrownFtv-Bold";
-  src:url("fonts/BrownFtv-Bold.otf");
-}
-@font-face {
-  font-family: "BrownFtv-Light";
-  src:url("fonts/BrownFtv-Light.otf");
-}
-@font-face {
-  font-family: "BrownFtv-Regular";
-  src:url("fonts/BrownFtv-Regular.otf");
+  font-family: "Brother1816-Medium";
+  src:url("fonts/Brother-1816-Medium.ttf");
 }
 
+@font-face {
+  font-family: "Brother1816-Bold";
+  src:url("fonts/Brother-1816-Bold.ttf");
+}
+@font-face {
+  font-family: "Brother1816-ExtraBold";
+  src:url("fonts/Brother-1816-ExtraBold.ttf");
+}
+
+*{
+  margin:0px;
+  padding:0px;
+  font-family: "Brother1816-Medium";
+}
+
+body{
+  background-color: #a3b7e0;
+}
+
+header{
+  background-color: #ffffff;
+  padding-bottom: 5em;
+  padding-top: 5em;
+}
+
+#logo{
+  height: 15em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main_section,#lower_section{
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+#lower_section{
+  background-color: #ffffff;
+}
 
 #card {
     /* border: 1px solid black; */
@@ -27,7 +60,7 @@
 }
 
 .blob {
-    border: 5px solid gray;
+    /* border: 5px solid gray; */
     border-radius: 100%;
     height: 18em;
     width: 18em;
@@ -44,23 +77,31 @@
     transform: translateY(-50%);
 }
 
+
 .button {
-    display: flex;
+    color:#ffffff;
+    margin-left: 17%;
+    margin-right: 17%;
+    display: inline-flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 15px;
     margin-top: 3em;
     text-align: center;
-    width: 10em;
-    height: 3em;
+    border:4px solid #ffffff;
+    width: 8em;
+    height: 4em;
+    text-transform: uppercase;
+    font-size: 1em;
+    background-color: #465a92;
 }
 
 .button:hover {
-    border: 1px solid cornflowerblue;
-    color: cornflowerblue;
+    background-color: #ffffff;
+    border: solid #465a92;
+    color: #465a92;
+    font-family: "Brother1816-ExtraBold";
     cursor: pointer;
 }
 
@@ -71,6 +112,6 @@
 .word {
     display:table-cell;
     vertical-align: middle;
-    font-family: "BrownFtv-Bold";
+    font-family: "Brother1816-Medium";
     font-size: 2em;
 }
