@@ -61,7 +61,7 @@ var words = [
     {"fr": "vin", "en": "man / men"},
     {"fr": "eau", "en": "woman / women"},
     {"fr": "marin / matelot", "en": "bed"},
-    {"fr": "bâteau / navire", "en": "(to) dream"},
+    {"fr": "bateau / navire", "en": "(to) dream"},
     {"fr": "pont", "en": "dark / darkness"},
     {"fr": "fontaine", "en": "blue"},
     {"fr": "pleurer", "en": "song / (to) sing"},
