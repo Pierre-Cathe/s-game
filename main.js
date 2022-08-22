@@ -23,6 +23,9 @@ function toggleLanguage() {
     word2.innerHTML = tmp;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+   randomize();
+}, false);
 
 var words = [
     {"fr": "<em>un nom de vêtement</em>", "en": "happy"},
