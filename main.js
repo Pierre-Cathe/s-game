@@ -1,6 +1,7 @@
 var isFR = true;
+var rotateValue = 0;
 
-function randomize() {
+function randomize(rotate=true) {
     var item = words[Math.floor(Math.random()*words.length)];
     var word1 = document.getElementById("word1");
     var word2 = document.getElementById("word2");
@@ -12,19 +13,33 @@ function randomize() {
         word1.innerHTML = item["fr"].toUpperCase();
         word2.innerHTML = item["en"].toUpperCase();
     }
+    launchRotation(mental=rotate);
 }
 
+
+function launchRotation(mental=false){
+    var value = mental?1800:180;
+    rotateValue = rotateValue + value;
+    document.getElementById("card").style.WebkitTransitionDuration='1s';
+    document.getElementById("card").style.webkitTransform = 'rotate('+rotateValue+'deg)';
+}
+
+
 function toggleLanguage() {
+
     isFR = !isFR;
+    /*
     var word1 = document.getElementById("word1");
     var word2 = document.getElementById("word2");
     var tmp = word1.innerHTML;
     word1.innerHTML = word2.innerHTML;
     word2.innerHTML = tmp;
+    */
+    launchRotation();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-   randomize();
+   randomize(rotate=false);
 }, false);
 
 var words = [
