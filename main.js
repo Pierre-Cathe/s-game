@@ -13,7 +13,10 @@ function randomize(rotate=true) {
         word1.innerHTML = item["fr"].toUpperCase();
         word2.innerHTML = item["en"].toUpperCase();
     }
-    launchRotation(mental=rotate);
+    if (rotate)
+    {
+        launchRotation(mental=true);
+    }
 }
 
 
