@@ -1,7 +1,10 @@
 var isFR = true;
-var rotateValue = 0;
+var rotateXValue = 0;
+var rotateYValue = 0;
+var rotateZValue = 0;
 
 function randomize(rotate=true) {
+
     var item = words[Math.floor(Math.random()*words.length)];
     var word1 = document.getElementById("word1");
     var word2 = document.getElementById("word2");
@@ -15,16 +18,34 @@ function randomize(rotate=true) {
     }
     if (rotate)
     {
-        launchRotation(mental=true);
+        launch3DRotation();
     }
+}
+
+function launch3DRotation() {
+    rotateYValue = rotateYValue + 180;
+    var even = rotateYValue%360==0;
+    scaleXValue = even?1:-1;
+    console.log('rotate3D(' + rotateXValue + 'deg,' + rotateYValue + 'deg,' + rotateZValue +  'deg)');
+    document.getElementById("card").style.WebkitTransitionDuration='0.5s';
+    document.getElementById("card").style.webkitTransform = 'rotateX(' + rotateXValue + 'deg) rotateY(' + rotateYValue + 'deg) rotateZ(' + rotateZValue +  'deg)';
+    document.getElementById("word1").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
+    document.getElementById("word2").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
+
 }
 
 
 function launchRotation(mental=false){
     var value = mental?1800:180;
-    rotateValue = rotateValue + value;
-    document.getElementById("card").style.WebkitTransitionDuration='1s';
-    document.getElementById("card").style.webkitTransform = 'rotate('+rotateValue+'deg)';
+    var even = rotateYValue%360==0;
+    if (even) {
+        rotateZValue = rotateZValue + value;
+    }
+    else {
+        rotateZValue = rotateZValue - value;
+    }
+    document.getElementById("card").style.WebkitTransitionDuration='1.5s';
+    document.getElementById("card").style.webkitTransform = 'rotateX(' + rotateXValue + 'deg) rotateY(' + rotateYValue + 'deg) rotateZ(' + rotateZValue +  'deg)';
 }
 
 
