@@ -4,34 +4,39 @@ var rotateYValue = 0;
 var rotateZValue = 0;
 
 function randomize(rotate=true) {
-
-    var item = words[Math.floor(Math.random()*words.length)];
-    var word1 = document.getElementById("word1");
-    var word2 = document.getElementById("word2");
-    if (isFR) {
-        word1.innerHTML = item["en"].toUpperCase();
-        word2.innerHTML = item["fr"].toUpperCase();
-    }
-    else {
-        word1.innerHTML = item["fr"].toUpperCase();
-        word2.innerHTML = item["en"].toUpperCase();
-    }
+    changeWord();
     if (rotate)
     {
         launch3DRotation();
     }
 }
 
+function changeWord() {
+    setTimeout(()=>{
+        var item = words[Math.floor(Math.random()*words.length)];
+        var word1 = document.getElementById("word1");
+        var word2 = document.getElementById("word2");
+        if (isFR) {
+            word1.innerHTML = item["en"].toUpperCase();
+            word2.innerHTML = item["fr"].toUpperCase();
+        }
+        else {
+            word1.innerHTML = item["fr"].toUpperCase();
+            word2.innerHTML = item["en"].toUpperCase();
+        }
+    }, 200);
+}
+
 function launch3DRotation() {
     rotateYValue = rotateYValue + 180;
     var even = rotateYValue%360==0;
     scaleXValue = even?1:-1;
-    console.log('rotate3D(' + rotateXValue + 'deg,' + rotateYValue + 'deg,' + rotateZValue +  'deg)');
     document.getElementById("card").style.WebkitTransitionDuration='0.5s';
     document.getElementById("card").style.webkitTransform = 'rotateX(' + rotateXValue + 'deg) rotateY(' + rotateYValue + 'deg) rotateZ(' + rotateZValue +  'deg)';
-    document.getElementById("word1").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
-    document.getElementById("word2").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
-
+    setTimeout(()=>{
+        document.getElementById("word1").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
+        document.getElementById("word2").style.webkitTransform = 'scaleX(' + scaleXValue + ')';
+    }, 200);
 }
 
 
