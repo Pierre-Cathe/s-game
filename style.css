@@ -146,4 +146,8 @@ header{
     #main_section {height: 55vmin;}
     #card {width: 50vmin;}
     .word {font-size: 3.5vmin;}
+    #blobcontainer {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
 }
