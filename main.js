@@ -56,7 +56,7 @@ function launchRotation(mental=false){
 
 function toggleLanguage() {
 
-    isFR = !isFR;
+    // isFR = !isFR;
     /*
     var word1 = document.getElementById("word1");
     var word2 = document.getElementById("word2");
